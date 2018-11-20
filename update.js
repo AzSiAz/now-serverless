@@ -1,4 +1,4 @@
-const fetch = require("isomorphic-unfetch")
+const fetch = require("node-fetch").default
 const cheerio = require("cheerio")
 const micro = require("micro")
 
