@@ -9,7 +9,6 @@ const extractSlug = (url, regex) => {
 };
 
 module.exports = async (req, res) => {
-    // res.end(new Date().toString())
     console.time("update")
     try {
         const request = await fetch("https://www.novelupdates.com")
