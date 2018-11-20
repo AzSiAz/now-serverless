@@ -4,6 +4,7 @@
         { "src": "update.js", "use": "@now/node" }
     ],
     "routes": [
+        { "src": "/", "dest": "/update.js" },
         { "src": "/update", "dest": "/update.js" }
     ],
     "regions": ["all"],
