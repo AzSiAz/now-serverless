@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "update.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/update", "dest": "/update.js" }
+    ]
+}
