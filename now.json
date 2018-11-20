@@ -5,5 +5,7 @@
     ],
     "routes": [
         { "src": "/update", "dest": "/update.js" }
-    ]
+    ],
+    "regions": ["all"],
+    "public": true
 }
