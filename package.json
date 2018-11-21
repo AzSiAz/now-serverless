@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "dev:update": "micro-dev src/update.js",
-    "dev:group": "micro-dev src/groupList.js"
+    "dev:groupList": "micro-dev src/groupList.js",
+    "dev:group": "micro-dev src/group.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

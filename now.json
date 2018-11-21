@@ -2,12 +2,14 @@
     "version": 2,
     "builds": [
         { "src": "src/update.js", "use": "@now/node" },
-        { "src": "src/groupList.js", "use": "@now/node" }
+        { "src": "src/groupList.js", "use": "@now/node" },
+        { "src": "src/group.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
         { "src": "/update", "dest": "/src/update.js" },
-        { "src": "/group-list", "dest": "/src/groupList.js" }
+        { "src": "/group-list", "dest": "/src/groupList.js" },
+        { "src": "/group", "dest": "/src/group.js" }
     ],
     "regions": [
         "all"

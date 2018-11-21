@@ -6,7 +6,7 @@ const { parse } = require("url")
 
 const extractPagination = require("./utils/extractPagination")
 const { extractSlug, groupRegex } = require("./utils/extractSlug")
-const escapeCustom = require("./utils/escape")
+const escapeCustom = require("./utils/escapeCustom")
 
 const requestData$ = async (requestUrl) => {
     const params = parse(requestUrl, true).query
