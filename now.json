@@ -1,13 +1,13 @@
 {
     "version": 2,
     "builds": [
-        { "src": "update.js", "use": "@now/node" }
+        { "src": "src/update.js", "use": "@now/node" }
     ],
     "routes": [
-        { "src": "/", "dest": "/update.js" },
-        { "src": "/update", "dest": "/update.js" }
+        { "src": "/", "dest": "/src/update.js" },
+        { "src": "/update", "dest": "/src/update.js" }
     ],
     "regions": ["all"],
     "public": true,
-    "alias": ["azsiaz.xyz"]
+    "alias": [ "azsiaz.xyz" ]
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:update": "micro-dev update.js"
+    "dev:update": "micro-dev src/update.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
