@@ -79,6 +79,10 @@ const extractGroupData = ($) => {
     }
 }
 
+/**
+ * @param {string} requestUrl
+ * @returns {Promise<CheerioStatic>}
+ */
 const requestData$ = async (requestUrl) => {
     const params = parse(requestUrl, true).query
     if (!params.slug) throw createError(500, "missing slug")
@@ -90,6 +94,10 @@ const requestData$ = async (requestUrl) => {
     return cheerio.load(html)
 }
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ */
 module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)

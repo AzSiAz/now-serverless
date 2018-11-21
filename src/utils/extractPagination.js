@@ -1,3 +1,6 @@
+/**
+ * @param {CheerioStatic} $
+ */
 module.exports = ($) => {
     // next_page
     const maxPage = parseInt(

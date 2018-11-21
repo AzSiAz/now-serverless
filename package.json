@@ -5,7 +5,23 @@
   "scripts": {
     "dev:update": "micro-dev src/update.js",
     "dev:groupList": "micro-dev src/groupList.js",
-    "dev:group": "micro-dev src/group.js"
+    "dev:group": "micro-dev src/group.js",
+    "dev:novelTypes": "micro-dev src/novelTypes.js",
+    "dev:novelTypesList": "micro-dev src/novelTypesList.js",
+    "dev:tags": "micro-dev src/tags.js",
+    "dev:tagsList": "micro-dev src/tagsList.js",
+    "dev:publisher": "micro-dev src/publisher.js",
+    "dev:publisherList": "micro-dev src/publisherList.js",
+    "dev:languages": "micro-dev src/languages.js",
+    "dev:languagesList": "micro-dev src/languagesList.js",
+    "dev:genres": "micro-dev src/genres.js",
+    "dev:genresList": "micro-dev src/genresList.js",
+    "dev:authors": "micro-dev src/authors.js",
+    "dev:authorsList": "micro-dev src/authorsList.js",
+    "dev:artists": "micro-dev src/artists.js",
+    "dev:artistsList": "micro-dev src/artistsList.js",
+    "dev:novel": "micro-dev src/novel.js",
+    "dev:novelList": "micro-dev src/novelList.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
@@ -13,6 +29,7 @@
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.9",
     "micro-dev": "^3.0.0"
   }
 }

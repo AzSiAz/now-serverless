@@ -8,6 +8,9 @@ const extractPagination = require("./utils/extractPagination")
 const { extractSlug, groupRegex, novelRegex } = require("./utils/extractSlug")
 
 
+/** 
+ * @param {CheerioStatic} $
+*/
 const extractUpdates = ($) => {
     return $(`#myTable > tbody > tr`).map((i, el) => {
         const element = $(el);
@@ -32,6 +35,10 @@ const extractUpdates = ($) => {
     }).get()
 }
 
+/**
+ * @param {string} requestUrl
+ * @returns {Promise<CheerioStatic>}
+ */
 const requestData$ = async (requestUrl) => {
     const params = parse(requestUrl, true).query
     const url = params.page ? `https://www.novelupdates.com/?pg=${params.page}` : "https://www.novelupdates.com"
@@ -40,6 +47,10 @@ const requestData$ = async (requestUrl) => {
     return cheerio.load(html)
 }
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ */
 module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)

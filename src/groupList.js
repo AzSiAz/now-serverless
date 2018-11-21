@@ -8,6 +8,10 @@ const extractPagination = require("./utils/extractPagination")
 const { extractSlug, groupRegex } = require("./utils/extractSlug")
 const escapeCustom = require("./utils/escapeCustom")
 
+/**
+ * @param {string} requestUrl
+ * @returns {Promise<CheerioStatic>}
+ */
 const requestData$ = async (requestUrl) => {
     const params = parse(requestUrl, true).query
     const url = params.page ? 
@@ -17,6 +21,9 @@ const requestData$ = async (requestUrl) => {
     return cheerio.load(html)
 }
 
+/** 
+ * @param {CheerioStatic} $
+*/
 const extractGroupList = ($) => {
     return $("div.wpb_wrapper > ul > li > a").map((i, el) => {
         const element = $(el);
@@ -28,6 +35,10 @@ const extractGroupList = ($) => {
     }).get();
 }
 
+/**
+ * @param {import("http").IncomingMessage} req
+ * @param {import("http").ServerResponse} res
+ */
 module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)

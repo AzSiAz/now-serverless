@@ -1,3 +1,7 @@
+/**
+ * @param {string} name
+ * @returns {string}
+ */
 module.exports = (name) => {
     return name
         .replace(/\\/g, "\\\\")

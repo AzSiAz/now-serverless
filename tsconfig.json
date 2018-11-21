@@ -1,6 +1,13 @@
 {
     "compilerOptions": {
+        "target": "es2018",
+        "sourceRoot": "./src",
+        "outDir": "./dist",
+        "lib": [ "es2018" ],
         "allowJs": true,
-        "checkJs": true
+        "checkJs": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "sourceMap": true
     }
 }

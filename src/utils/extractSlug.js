@@ -19,6 +19,12 @@ const originalPublishersRegex = /https:\/\/www.novelupdates.com\/opublisher\/(.*
 // https://www.novelupdates.com/stag/{tag_slug}/
 const tagsRegex = /https:\/\/www.novelupdates.com\/stag\/(.*)\//
 
+/**
+ * 
+ * @param {string} url
+ * @param {RegExp} regex
+ * @returns {string}
+ */
 const extractSlug = (url, regex) => {
     const match = url.match(regex);
 
