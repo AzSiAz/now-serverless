@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:update": "micro-dev src/update.js"
+    "dev:update": "micro-dev src/update.js",
+    "dev:group": "micro-dev src/groupList.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "isomorphic-unfetch": "^3.0.0",
     "micro": "^9.3.3",
     "node-fetch": "^2.3.0"
   },

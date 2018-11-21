@@ -1,13 +1,19 @@
 {
     "version": 2,
     "builds": [
-        { "src": "src/update.js", "use": "@now/node" }
+        { "src": "src/update.js", "use": "@now/node" },
+        { "src": "src/groupList.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
-        { "src": "/update", "dest": "/src/update.js" }
+        { "src": "/update", "dest": "/src/update.js" },
+        { "src": "/group-list", "dest": "/src/groupList.js" }
     ],
-    "regions": ["all"],
+    "regions": [
+        "all"
+    ],
     "public": true,
-    "alias": [ "api.azsiaz.xyz" ]
+    "alias": [
+        "api.azsiaz.xyz"
+    ]
 }
