@@ -41,7 +41,7 @@ const extractUpdates = ($) => {
  */
 const requestData$ = async (requestUrl) => {
     const params = parse(requestUrl, true).query
-    const url = params.page ? `https://www.novelupdates.com/?pg=${params.page}` : "https://www.novelupdates.com"
+    const url = `https://www.novelupdates.com/?pg=${params.page}` 
     const request = await fetch(url)
     const html = await request.text()
     return cheerio.load(html)

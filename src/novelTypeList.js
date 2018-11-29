@@ -5,20 +5,19 @@ const { send, createError } = require("micro")
 const { parse } = require("url")
 
 const extractPagination = require("./utils/extractPagination")
-const { extractSlug, novelTypesRegex } = require("./utils/extractSlug")
-const escapeCustom = require("./utils/escapeCustom")
+const { extractSlug, novelTypeRegex } = require("./utils/extractSlug")
 
 /**
  * @param {CheerioStatic} $
  * @returns {object[]}
  */
-const extractNovelTypesListData = ($) => {
+const extractNovelTypeListData = ($) => {
     return $("div.wpb_wrapper > ul > li > a").map((i, el) => {
         const element = $(el)
 
         return {
-            name: escapeCustom(element.text().trim()),
-            slug: extractSlug(element.attr("href"), novelTypesRegex)
+            name: element.text().trim(),
+            slug: extractSlug(element.attr("href"), novelTypeRegex)
         }
     }).get()
 }
@@ -44,7 +43,7 @@ module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)
         const pagination = extractPagination($)
-        const data = extractNovelTypesListData($)
+        const data = extractNovelTypeListData($)
 
         send(res, 200, {
             pagination,

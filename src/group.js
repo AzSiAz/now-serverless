@@ -5,8 +5,7 @@ const { send, createError } = require("micro")
 const { parse } = require("url")
 
 const extractPagination = require("./utils/extractPagination")
-const { extractSlug, groupRegex, novelRegex } = require("./utils/extractSlug")
-const escapeCustom = require("./utils/escapeCustom")
+const { extractSlug, novelRegex } = require("./utils/extractSlug")
 
 /** 
  * @param {CheerioStatic} $

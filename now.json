@@ -4,16 +4,20 @@
         { "src": "src/update.js", "use": "@now/node" },
         { "src": "src/group.js", "use": "@now/node" },
         { "src": "src/groupList.js", "use": "@now/node" },
-        { "src": "src/novelTypesList.js", "use": "@now/node" },
-        { "src": "src/novelTypes.js", "use": "@now/node" }
+        { "src": "src/novelTypeList.js", "use": "@now/node" },
+        { "src": "src/novelType.js", "use": "@now/node" },
+        { "src": "src/tag.js", "use": "@now/node" },
+        { "src": "src/tagList.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
         { "src": "/update", "dest": "/src/update.js" },
         { "src": "/group", "dest": "/src/group.js" },
         { "src": "/group-list", "dest": "/src/groupList.js" },
-        { "src": "/novel-types", "dest": "/src/novelTypes.js" },
-        { "src": "/novel-types-list", "dest": "/src/novelTypesList.js" }
+        { "src": "/novel-type", "dest": "/src/novelType.js" },
+        { "src": "/novel-type-list", "dest": "/src/novelTypeList.js" },
+        { "src": "/tag", "dest": "/src/tag.js" },
+        { "src": "/tag-list", "dest": "/src/tagList.js" }
     ],
     "regions": [
         "all"

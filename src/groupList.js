@@ -6,7 +6,6 @@ const { parse } = require("url")
 
 const extractPagination = require("./utils/extractPagination")
 const { extractSlug, groupRegex } = require("./utils/extractSlug")
-const escapeCustom = require("./utils/escapeCustom")
 
 /**
  * @param {string} requestUrl
@@ -29,7 +28,7 @@ const extractGroupList = ($) => {
         const element = $(el);
     
         return {
-            name: escapeCustom(element.text()),
+            name: element.text(),
             slug: extractSlug(element.attr("href"), groupRegex),
         };
     }).get();

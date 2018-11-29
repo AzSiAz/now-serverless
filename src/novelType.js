@@ -5,14 +5,13 @@ const { send, createError } = require("micro")
 const { parse } = require("url")
 
 const extractPagination = require("./utils/extractPagination")
-const { extractSlug, novelTypesRegex, novelRegex } = require("./utils/extractSlug")
-const escapeCustom = require("./utils/escapeCustom")
+const { extractSlug, novelRegex } = require("./utils/extractSlug")
 
 /**
  * @param {CheerioStatic} $
  * @returns {object[]}
  */
-const extractNovelTypesData = ($) => {
+const extractNovelTypeData = ($) => {
     return $("#myTable > tbody > tr").map((i, el) => {
         const element = $(el)
 
@@ -21,10 +20,10 @@ const extractNovelTypesData = ($) => {
             slug: extractSlug(element.first().find("a").attr("href"), novelRegex),
             rating: element.first().find(".lstrate").text().replace(")", "").replace("(", "").trim(),
             lang: element.find("td.orgalign > span").text(),
-            name: escapeCustom(element.last().find("a").text().trim()),
+            name: element.last().find("a").text().trim(),
             genre: element.last().find(".gennew").map((i, el2) => $(el2).text().trim()).get(),
-            releaseNumber: element.last().find(".sfstext").text().trim().replace("Releases:", ""),
-            description: escapeCustom(element.last().find("div.noveldesc").text().replace("more>>", "").replace("... ", "").replace("<<less", "").trim())
+            releaseNumber: element.last().find(".sfstext").text().replace("Releases:", "").trim(),
+            description: element.last().find("div.noveldesc").text().replace("more>>", "").replace("... ", "").replace("<<less", "").trim()
         }
     }).get()
 }
@@ -52,7 +51,7 @@ module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)
         const pagination = extractPagination($)
-        const data = extractNovelTypesData($)
+        const data = extractNovelTypeData($)
 
         send(res, 200, {
             pagination,
