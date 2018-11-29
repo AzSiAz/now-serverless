@@ -12,12 +12,13 @@ const { extractSlug, novelTypeRegex } = require("./utils/extractSlug")
  * @returns {object[]}
  */
 const extractNovelTypeListData = ($) => {
-    return $("div.wpb_wrapper > ul > li > a").map((i, el) => {
+    return $("div.wpb_wrapper > ul > li").map((i, el) => {
         const element = $(el)
 
         return {
-            name: element.text().trim(),
-            slug: extractSlug(element.attr("href"), novelTypeRegex)
+            name: element.find("a").text().trim(),
+            slug: extractSlug(element.find("a").attr("href"), novelTypeRegex),
+            novelNumber: element.text().match(/\d+/g)[0].trim()
         }
     }).get()
 }
