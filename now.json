@@ -2,14 +2,17 @@
     "version": 2,
     "builds": [
         { "src": "src/update.js", "use": "@now/node" },
+        { "src": "src/group.js", "use": "@now/node" },
         { "src": "src/groupList.js", "use": "@now/node" },
-        { "src": "src/novelTypesList.js", "use": "@now/node" }
+        { "src": "src/novelTypesList.js", "use": "@now/node" },
+        { "src": "src/novelTypes.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
         { "src": "/update", "dest": "/src/update.js" },
-        { "src": "/group-list", "dest": "/src/groupList.js" },
         { "src": "/group", "dest": "/src/group.js" },
+        { "src": "/group-list", "dest": "/src/groupList.js" },
+        { "src": "/novel-types", "dest": "/src/novelTypes.js" },
         { "src": "/novel-types-list", "dest": "/src/novelTypesList.js" }
     ],
     "regions": [
