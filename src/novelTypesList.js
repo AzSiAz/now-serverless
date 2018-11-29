@@ -12,7 +12,7 @@ const escapeCustom = require("./utils/escapeCustom")
  * @param {CheerioStatic} $
  * @returns {object[]}
  */
-const extractNovelTypesData = ($) => {
+const extractNovelTypesListData = ($) => {
     return $("div.wpb_wrapper > ul > li > a").map((i, el) => {
         const element = $(el)
 
@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
     try {
         const $ = await requestData$(req.url)
         const pagination = extractPagination($)
-        const data = extractNovelTypesData($)
+        const data = extractNovelTypesListData($)
 
         send(res, 200, {
             pagination,

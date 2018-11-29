@@ -21,7 +21,8 @@
     "dev:artists": "micro-dev src/artists.js",
     "dev:artistsList": "micro-dev src/artistsList.js",
     "dev:novel": "micro-dev src/novel.js",
-    "dev:novelList": "micro-dev src/novelList.js"
+    "dev:novelList": "micro-dev src/novelList.js",
+    "dev:novelListCompleted": "micro-dev src/novelListCompleted.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
