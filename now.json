@@ -7,7 +7,9 @@
         { "src": "src/novelTypeList.js", "use": "@now/node" },
         { "src": "src/novelType.js", "use": "@now/node" },
         { "src": "src/tag.js", "use": "@now/node" },
-        { "src": "src/tagList.js", "use": "@now/node" }
+        { "src": "src/tagList.js", "use": "@now/node" },
+        { "src": "src/publisher.js", "use": "@now/node" },
+        { "src": "src/publisherList.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
@@ -17,7 +19,9 @@
         { "src": "/novel-type", "dest": "/src/novelType.js" },
         { "src": "/novel-type-list", "dest": "/src/novelTypeList.js" },
         { "src": "/tag", "dest": "/src/tag.js" },
-        { "src": "/tag-list", "dest": "/src/tagList.js" }
+        { "src": "/tag-list", "dest": "/src/tagList.js" },
+        { "src": "/publisher", "dest": "/src/publisher.js" },
+        { "src": "/publisher-list", "dest": "/src/publisherList.js" }
     ],
     "regions": [
         "all"
