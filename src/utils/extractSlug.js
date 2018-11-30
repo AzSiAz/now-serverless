@@ -2,8 +2,6 @@
 const artistRegex = /https:\/\/www.novelupdates.com\/nartist\/(.*)\//
 // https://www.novelupdates.com/nauthor/{author_slug}/
 const authorRegex = /https:\/\/www.novelupdates.com\/nauthor\/(.*)\//
-// https://www.novelupdates.com/epublisher/{publisher_slug}/
-const englishPublisherRegex = /https:\/\/www.novelupdates.com\/epublisher\/(.*)\//
 // https://www.novelupdates.com/genre/{genre_slug}/
 const genreRegex = /https:\/\/www.novelupdates.com\/genre\/(.*)\//
 // https://www.novelupdates.com/group/{group_slug}/
@@ -14,8 +12,9 @@ const languageRegex = /https:\/\/www.novelupdates.com\/language\/(.*)\//
 const novelRegex = /https:\/\/www.novelupdates.com\/series\/(.*)\//
 // https://www.novelupdates.com/ntype/{type_slug}/
 const novelTypeRegex = /https:\/\/www.novelupdates.com\/ntype\/(.*)\//
+// https://www.novelupdates.com/epublisher/{publisher_slug}/
 // https://www.novelupdates.com/opublisher/{publisher_slug}/
-const originalPublisherRegex = /https:\/\/www.novelupdates.com\/opublisher\/(.*)\//
+const publisherRegex = /https:\/\/www.novelupdates.com\/[oe]publisher\/(.*)\//
 // https://www.novelupdates.com/stag/{tag_slug}/
 const tagRegex = /https:\/\/www.novelupdates.com\/stag\/(.*)\//
 
@@ -34,13 +33,12 @@ const extractSlug = (url, regex) => {
 module.exports = {
     artistRegex,
     authorRegex,
-    englishPublisherRegex,
     genreRegex,
     languageRegex,
     novelTypeRegex,
-    originalPublisherRegex,
     tagRegex,
     groupRegex,
     novelRegex,
+    publisherRegex,
     extractSlug
 }
