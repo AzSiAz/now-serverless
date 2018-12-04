@@ -13,7 +13,9 @@
         { "src": "src/language.js", "use": "@now/node" },
         { "src": "src/languageList.js", "use": "@now/node" },
         { "src": "src/genre.js", "use": "@now/node" },
-        { "src": "src/genreList.js", "use": "@now/node" }
+        { "src": "src/genreList.js", "use": "@now/node" },
+        { "src": "src/author.js", "use": "@now/node" },
+        { "src": "src/authorList.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
@@ -29,7 +31,9 @@
         { "src": "/language", "dest": "/src/language.js" },
         { "src": "/language-list", "dest": "/src/languageList.js" },
         { "src": "/genre", "dest": "/src/genre.js" },
-        { "src": "/genre-list", "dest": "/src/genreList.js" }
+        { "src": "/genre-list", "dest": "/src/genreList.js" },
+        { "src": "/author", "dest": "/src/author.js" },
+        { "src": "/author-list", "dest": "/src/authorList.js" }
     ],
     "regions": [
         "all"
