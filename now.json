@@ -17,7 +17,9 @@
         { "src": "src/author.js", "use": "@now/node" },
         { "src": "src/authorList.js", "use": "@now/node" },
         { "src": "src/artist.js", "use": "@now/node" },
-        { "src": "src/artistList.js", "use": "@now/node" }
+        { "src": "src/artistList.js", "use": "@now/node" },
+        { "src": "src/novelList.js", "use": "@now/node" },
+        { "src": "src/novelListCompleted.js", "use": "@now/node" }
     ],
     "routes": [
         { "src": "/", "dest": "/src/update.js" },
@@ -37,7 +39,9 @@
         { "src": "/author", "dest": "/src/author.js" },
         { "src": "/author-list", "dest": "/src/authorList.js" },
         { "src": "/artist", "dest": "/src/artist.js" },
-        { "src": "/artist-list", "dest": "/src/artistList.js" }
+        { "src": "/artist-list", "dest": "/src/artistList.js" },
+        { "src": "/novel-list", "dest": "/src/novelList.js" },
+        { "src": "/novel-list-completed", "dest": "/src/novelListCompleted.js" }
     ],
     "regions": [
         "all"
