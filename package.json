@@ -26,11 +26,13 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "got": "^9.3.2",
     "micro": "^9.3.3",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.10",
+    "@types/got": "^9.2.1",
     "micro-dev": "^3.0.0"
   }
 }
