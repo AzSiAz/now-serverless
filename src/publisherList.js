@@ -1,5 +1,5 @@
 // @ts-check
-const fetch = require("node-fetch").default
+const got = require("got")
 const cheerio = require("cheerio")
 const { send, createError } = require("micro")
 const { parse } = require("url")
@@ -34,10 +34,9 @@ const requestData$ = async (requestUrl) => {
         ? `https://www.novelupdates.com/list-english-publisher/?pg=${params.page}`
         : `https://www.novelupdates.com/list-original-publisher/?pg=${params.page}`
 
-    const request = await fetch(url)
-    const html = await request.text()
+    const request = await got(url)
 
-    return cheerio.load(html)
+    return cheerio.load(request.body)
 }
 
 /**

@@ -1,5 +1,5 @@
 // @ts-check
-const fetch = require("node-fetch").default
+const got = require("got")
 const cheerio = require("cheerio")
 const { send, createError } = require("micro")
 const { parse } = require("url")
@@ -37,10 +37,9 @@ const requestData$ = async (requestUrl) => {
     if (!params.slug) throw createError(500, "missing slug")
 
     const url = `https://www.novelupdates.com/ntype/${params.slug}/?pg=${params.page}`
-    const request = await fetch(url)
-    const html = await request.text()
+    const request = await got(url)
 
-    return cheerio.load(html)
+    return cheerio.load(request.body)
 }
 
 /**
